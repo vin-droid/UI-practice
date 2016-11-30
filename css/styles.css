@@ -1,0 +1,40 @@
+.content article{
+	padding: 100px 0;
+	max-width: 640px;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+h1{
+	color: #000;
+	font-weight: 300;
+	font-size: 50px;
+}
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.bird-box{
+	position: relative;height: 600px;background: url('../images/smog.jpg')  ; 
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+.logo{
+	height: 300px;
+    width: 100%;
+    background: url(../images/bird-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+
+}
+.fore-bird{
+	width: 306px;
+    height: 729px;
+    background: rgba(249, 243, 243, 0) url(../images/bird.png) no-repeat;
+    background-position:  bottom;
+    background-size: contain;
+    
+
+}

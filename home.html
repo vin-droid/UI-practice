@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>parallax1</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+<body>
+
+
+<header class="bird-box">
+	<div class="back-bird"></div>
+	<div class="logo"></div>
+	<div class="fore-bird"></div>
+</header>
+
+<section class="content">
+   <article>
+   	  <h1>Cloning Store</h1>
+   	  <hr>
+   	  <p>
+   	  	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+   	  </p>
+   </article>
+   <div style="height:2000px;">
+   	
+   </div>	
+</section>
+
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+   $(window).scroll(function(){
+   	
+   	 var wPosition = $(window).scrollTop();
+
+      $('.fore-bird').css({'transform': 'translate('+ wPosition/10 +'%,0px)'});
+      $('.logo').css({'transform': 'translate(0px, '+ wPosition/30 +'%)'});
+
+
+
+   });
+});
+</script>
