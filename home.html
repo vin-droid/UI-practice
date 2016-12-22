@@ -6,6 +6,8 @@
 	<script src="main.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -23,7 +25,125 @@
    	  <p>
    	  	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
    	  </p>
+
+      <hr>
+      
+
+  <div class="pics">
+      	<div class="row img-row">
+      		<div class="figure col-sm-3">
+      			<img src="images/1.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/2.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/3.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		
+      	</div>
+      	<div class="row img-row">
+      		<div class="figure col-sm-3">
+      			<img src="images/4.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/5.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/6.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      	
+      	</div>
+      	<div class="row img-row">
+      		<div class="figure col-sm-3">
+      			<img src="images/7.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/8.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/9.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		
+      	</div>
+      	<div class="row img-row">
+      		<div class="figure col-sm-3">
+      			<img src="images/10.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/11.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/12.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		
+      	</div>
+      	<div class="row img-row">
+      		<div class="figure col-sm-3">
+      			<img src="images/13.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/14.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		<div class="figure col-sm-3">
+      			<img src="images/15.jpg">
+      			<div class="figcaption">
+      				My Crush <strong> Rotlu</strong>
+      			</div>
+      		</div>
+      		
+      	</div>
+      </div>
+
+
+
+      <div class="large-window">
+      	
+      </div>
    </article>
+ 
    <div style="height:2000px;">
    	
    </div>	
@@ -41,7 +161,15 @@
       $('.fore-bird').css({'transform': 'translate('+ wPosition/10 +'%,0px)'});
       $('.logo').css({'transform': 'translate(0px, '+ wPosition/30 +'%)'});
 
-
+      
+      if(wPosition > $('.pics').offset().top - ($(window).height() / 1.5)){
+      	console.log('hi');
+      	$('.pics .figure').each(function(i) {
+      		setTimeout(function(){
+              $('.pics .figure').eq(i).addClass('is_showing');	   
+      		},150 * (i+1));
+      	});
+      }
 
    });
 });
