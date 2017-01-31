@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="demo.png">
+	<script src="js/main.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/styles.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<div w3-include-html="nav-bar.html"></div>
+	<div class="main">
+
+	</div>
+
+	<script>
+		w3IncludeHTML();
+		$(document).ready(function(){
+	      $('.navbar-inverse .navbar-nav>li>a').click(function() {
+	         // debugger;  
+			        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+			        && location.hostname == this.hostname) {
+			        	// var $page  = this.href;
+			        // debugger;
+			          // var $target = $page.substr($page.lastIndexOf('/')+1,$page.length);
+			          var $target = this.id;
+			      // debugger;
+			          if ($target.length) {
+			            
+			             $('.main').load($target);
+			           return false;
+			          }
+			        }
+	        });
+        }); 
+	</script>
+</body>
+</html>
+<style type="text/css" media="screen">
+	body{
+		font-family: 'Open Sans Condensed', sans-serif !important;
+		min-height: 1000px;
+	}
+</style>
